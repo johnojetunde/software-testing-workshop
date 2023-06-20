@@ -1,0 +1,23 @@
+server:
+  port: 8081
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  mvc:
+    format:
+      date: yyyy-MM-dd
+  datasource:
+    url: jdbc:mysql://localhost/offlines_sales_testing
+    username: root
+    password: password
+    max-connections: 10
+    hikari:
+      connection-test-query: SELECT 1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
